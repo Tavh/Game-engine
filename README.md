@@ -1,2 +1,2 @@
-# Game-engine
+# Sky engine
 A game engine project
