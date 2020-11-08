@@ -1,8 +1,10 @@
 #pragma once
 
 #include "Core.h"
+#include "Events/Event.h"
 
-namespace Sky {
+namespace Sky 
+{
 	class SKY_API Application
 	{
 		public:

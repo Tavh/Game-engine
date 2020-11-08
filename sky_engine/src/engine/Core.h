@@ -9,3 +9,5 @@
 #else 
 	#error Sky only supports windows right now
 #endif
+
+#define BIT(bits) (1 << bits)

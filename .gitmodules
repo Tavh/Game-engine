@@ -1,0 +1,3 @@
+[submodule "sky_engine/vendor/spdlog"]
+	path = sky_engine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
