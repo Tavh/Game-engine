@@ -10,6 +10,12 @@ workspace "sky_engine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution dir)
+IncludeDir = {}
+IncludeDir["GLFW"] = "sky_engine/vendor/GLFW/include"
+
+include "sky_engine/vendor/GLFW"
+
 project "sky_engine"
     location "sky_engine"
     kind "SharedLib" -- Specifies that this project produces a dynamic linked library (dll)
@@ -17,6 +23,9 @@ project "sky_engine"
     
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+    pchheader "skypch.h"
+    pchsource "sky_engine/src/skypch.cpp"
 
     files
     {
@@ -27,7 +36,14 @@ project "sky_engine"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"

@@ -7,6 +7,9 @@
     <Filter Include="engine\events">
       <UniqueIdentifier>{9FF33A70-0BB4-B6A6-D4EE-FF23406EFB82}</UniqueIdentifier>
     </Filter>
+    <Filter Include="platform">
+      <UniqueIdentifier>{4A63C33C-3630-1E48-5F49-0CF04B7553D6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Engine.h" />
@@ -22,6 +25,9 @@
     <ClInclude Include="src\engine\Log.h">
       <Filter>engine</Filter>
     </ClInclude>
+    <ClInclude Include="src\engine\Window.h">
+      <Filter>engine</Filter>
+    </ClInclude>
     <ClInclude Include="src\engine\events\ApplicationEvent.h">
       <Filter>engine\events</Filter>
     </ClInclude>
@@ -34,6 +40,10 @@
     <ClInclude Include="src\engine\events\MouseEvent.h">
       <Filter>engine\events</Filter>
     </ClInclude>
+    <ClInclude Include="src\platform\WindowsWindow.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\skypch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\Application.cpp">
@@ -42,5 +52,9 @@
     <ClCompile Include="src\engine\Log.cpp">
       <Filter>engine</Filter>
     </ClCompile>
+    <ClCompile Include="src\platform\WindowsWindow.cpp">
+      <Filter>platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\skypch.cpp" />
   </ItemGroup>
 </Project>

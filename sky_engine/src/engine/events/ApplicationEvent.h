@@ -1,7 +1,7 @@
 #pragma once
 
+#include "skypch.h"
 #include "Event.h"
-#include <sstream>
 
 namespace Sky {
 

@@ -1,11 +1,11 @@
 #pragma once
 
+#include "skypch.h"
 #include "engine/Core.h"
-#include <string>
-#include <functional>
 
 /* Events are currently blocking, a good idea would be to maybe make an 
    unsynchronous event system in the future that uses a buffer to store events */
+
 namespace Sky 
 {
 	enum class EventType
@@ -48,6 +48,25 @@ namespace Sky
 			}
 		protected:
 			bool m_Handled = false;
+	};
+
+	class EventDispatcher
+	{
+		template<typename T> using EventFn = std::function<bool(T&)>;
+		public:
+			EventDispatcher(Event& event) : m_Event(event) {}
+
+			template<typename T> bool Dispatch(EventFn<T> func)
+			{
+				if (m_Event.GetEventType() == T::GetStaticType())
+				{
+					m_Event.m_Handled = func(*(T*)&m_Event);
+					return true;
+				}
+				return false;
+			}
+		private:
+			Event& m_Event;
 	};
 
 	inline std::ostream& operator<<(std::ostream& os, const Event& e)
