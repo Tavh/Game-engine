@@ -2,7 +2,6 @@
 
 #include "skypch.h"
 #include "WindowsWindow.h"
-#include "engine/Log.h"
 
 namespace Sky
 {

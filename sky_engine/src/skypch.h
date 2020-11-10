@@ -11,6 +11,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "engine/Log.h"
+
 #ifdef SKY_PLATFORM_WINDOWS
 	#include <windows.h>
 #endif
