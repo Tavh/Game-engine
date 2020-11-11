@@ -7,3 +7,10 @@ bin-int/
 .user
 sky_engine/sky_engine.vcxproj.user
 *.user
+
+# Visual Studio files and folder
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
