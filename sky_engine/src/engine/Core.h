@@ -12,7 +12,7 @@
 
 #ifdef SKY_ENABLE_ASSERTS
 	#define SKY_ASSERT(x, ...) { if(!(x) { SKY_ERROR("Assertion failed: {0}", __VA_ARGS__); __debugbreak(); } }
-	#define SKY_CORE_ASSET(x, ... { if!(x)) { SKY_CORE_ERROR("Assertion failed {0}", __VA_ARGS__); __debugbreak(); }
+	#define SKY_CORE_ASSERT(x, ... { if!(x)) { SKY_CORE_ERROR("Assertion failed {0}", __VA_ARGS__); __debugbreak(); }
 #else
 	#define SKY_ASSERT(x, ...)
 	#define SKY_CORE_ASSERT(x, ...)

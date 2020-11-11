@@ -6,8 +6,8 @@
 #include "engine/events/Event.h"
 
 const std::string DEFAULT_WINDOW_TITLE = "Sky engine";
-const int DEFAULT_WINDOW_WIDTH = 1280;
-const int DEFAULT_WINDOW_HEIGHT = 720;
+const int DEFAULT_WINDOW_WIDTH = 2560;
+const int DEFAULT_WINDOW_HEIGHT = 1440;
 
 namespace Sky {
 	struct WindowProps

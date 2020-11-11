@@ -19,7 +19,7 @@ namespace Sky
 			bool m_Running = true;
 	};
 
-	// Define this function in your Sky application
+	// Implement this function in your Sky application
 	Application* CreateApplication();
 }
 

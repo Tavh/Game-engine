@@ -1,3 +1,5 @@
+startproject "sandbox"
+
 workspace "sky_engine"
     architecture "x64"
 
@@ -54,7 +56,7 @@ project "sky_engine"
         defines
         {
             "SKY_PLATFORM_WINDOWS",
-            "SKY_BUILD_DLL"
+            "SKY_BUILD_DLL",
         }
 
         postbuildcommands
@@ -102,7 +104,7 @@ project "sandbox"
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"
-        systemversion "10.0.18362.0"
+        systemversion "latest"
 
         defines
         {
