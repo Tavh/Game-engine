@@ -10,8 +10,8 @@ namespace Sky
 		public:
 			MouseMovedEvent(float x, float y) : m_MouseX(x), m_MouseY(y) {}
 
-			inline float GetY() const { return m_MouseX; }
-			inline float GetY() const { return m_MouseY; }
+			float GetY() const { return m_MouseX; }
+			float GetX() const { return m_MouseY; }
 			
 			std::string	ToString() const override
 			{
@@ -36,7 +36,7 @@ namespace Sky
 			std::string	ToString() const override
 			{
 				std::stringstream ss;
-				ss << "MouseScrolledEvent: " << GetYOffset << ", " << GetXOffset;
+				ss << "MouseScrolledEvent: " << GetYOffset() << ", " << GetXOffset();
 				return ss.str();
 			}
 			EVENT_CLASS_TYPE(MouseMoved)
