@@ -15,8 +15,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution dir)
 IncludeDir = {}
 IncludeDir["GLFW"] = "sky_engine/vendor/GLFW/include"
+IncludeDir["Glad"] = "sky_engine/vendor/Glad/include"
 
 include "sky_engine/vendor/GLFW"
+include "sky_engine/vendor/Glad"
 
 project "sky_engine"
     location "sky_engine"
@@ -39,12 +41,14 @@ project "sky_engine"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -57,6 +61,7 @@ project "sky_engine"
         {
             "SKY_PLATFORM_WINDOWS",
             "SKY_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands
@@ -66,14 +71,17 @@ project "sky_engine"
 
     filter "configurations:Debug"
         defines "SKY_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "SKY_RELEASE"
+        buildoptions "/MD"
         optimize "On"
     
     filter "configurations:Dist"
         defines "SKY_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 project "sandbox"
@@ -113,12 +121,15 @@ project "sandbox"
 
     filter "configurations:Debug"
         defines "SKY_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "SKY_RELEASE"
+        buildoptions "/MD"
         optimize "On"
     
     filter "configurations:Dist"
         defines "SKY_DIST"
+        buildoptions "/MD"
         optimize "On"
