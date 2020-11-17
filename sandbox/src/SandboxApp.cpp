@@ -22,6 +22,8 @@ class SandboxApplication : public Sky::Application
 		SandboxApplication() 
 		{
 			PushLayer(new ExampleLayer());
+			PushOverlay(new Sky::ImGuiLayer());
+
 		}
 
 		~SandboxApplication() {}

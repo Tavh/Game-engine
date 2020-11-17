@@ -50,6 +50,8 @@
       <Filter>platform</Filter>
     </ClInclude>
     <ClInclude Include="src\skypch.h" />
+    <ClInclude Include="src\engine\imgui\ImGuiLayer.h" />
+    <ClInclude Include="src\platform\opengl\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\Application.cpp">
@@ -68,5 +70,7 @@
       <Filter>platform</Filter>
     </ClCompile>
     <ClCompile Include="src\skypch.cpp" />
+    <ClCompile Include="src\engine\imgui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\platform\opengl\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>

@@ -4,3 +4,6 @@
 [submodule "sky_engine/vendor/GLFW"]
 	path = sky_engine/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "sky_engine/vendor/imgui"]
+	path = sky_engine/vendor/imgui
+	url = https://github.com/TheCherno/imgui

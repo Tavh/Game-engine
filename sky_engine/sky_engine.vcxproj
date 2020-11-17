@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>skypch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SKY_PLATFORM_WINDOWS;SKY_BUILD_DLL;GLFW_INCLUDE_NONE;SKY_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -103,7 +103,7 @@
       <PrecompiledHeaderFile>skypch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SKY_PLATFORM_WINDOWS;SKY_BUILD_DLL;GLFW_INCLUDE_NONE;SKY_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -130,7 +130,7 @@
       <PrecompiledHeaderFile>skypch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SKY_PLATFORM_WINDOWS;SKY_BUILD_DLL;GLFW_INCLUDE_NONE;SKY_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -152,6 +152,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\engine\imgui\ImGuiLayer.h" />
     <ClInclude Include="src\Engine.h" />
     <ClInclude Include="src\engine\Application.h" />
     <ClInclude Include="src\engine\Core.h" />
@@ -164,14 +165,17 @@
     <ClInclude Include="src\engine\events\Event.h" />
     <ClInclude Include="src\engine\events\KeyEvent.h" />
     <ClInclude Include="src\engine\events\MouseEvent.h" />
+    <ClInclude Include="src\platform\opengl\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\platform\WindowsWindow.h" />
     <ClInclude Include="src\skypch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\engine\imgui\ImGuiLayer.cpp" />
     <ClCompile Include="src\engine\Application.cpp" />
     <ClCompile Include="src\engine\Layer.cpp" />
     <ClCompile Include="src\engine\LayerStack.cpp" />
     <ClCompile Include="src\engine\Log.cpp" />
+    <ClCompile Include="src\platform\opengl\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\platform\WindowsWindow.cpp" />
     <ClCompile Include="src\skypch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
@@ -183,6 +187,9 @@
     </ProjectReference>
     <ProjectReference Include="vendor\Glad\Glad.vcxproj">
       <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
