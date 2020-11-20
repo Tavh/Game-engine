@@ -118,6 +118,7 @@ void    ImGui_ImplOpenGL3_NewFrame()
 // Note that this implementation is little overcomplicated because we are saving/setting up/restoring every OpenGL state explicitly, in order to be able to run within any OpenGL engine that doesn't do so.
 void    ImGui_ImplOpenGL3_RenderDrawData(ImDrawData* draw_data)
 {
+    SKY_CORE_TRACE("Drawing ImGui");
     // Avoid rendering when minimized, scale coordinates for retina displays (screen coordinates != framebuffer coordinates)
     ImGuiIO& io = ImGui::GetIO();
     int fb_width = (int)(draw_data->DisplaySize.x * io.DisplayFramebufferScale.x);

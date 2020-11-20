@@ -6,15 +6,13 @@
 
 namespace Sky 
 {
-	#define BIND_EVENT_FUNCTION(e) std::bind(&Application::e, this, std::placeholders::_1)
-
 	Application* Application::s_Instance = nullptr;
 	Application::Application() 
 	{
 		SKY_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
 		m_Window = std::unique_ptr<Window>(Window::Create());
-		m_Window->SetEventCallback(BIND_EVENT_FUNCTION(OnEvent));
+		m_Window->SetEventCallback(SKY_BIND_EVENT_FN(Application::OnEvent));
 	}
 
 	Application::~Application()
@@ -35,7 +33,7 @@ namespace Sky
 	void Application::OnEvent(Event& event)
 	{
 		EventDispatcher dispatcher(event);
-		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FUNCTION(OnWindowClose));
+		dispatcher.Dispatch<WindowCloseEvent>(SKY_BIND_EVENT_FN(Application::OnWindowClose));
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{

@@ -19,3 +19,5 @@
 #endif
 
 #define BIT(bits) (1 << bits)
+
+#define SKY_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1) 
