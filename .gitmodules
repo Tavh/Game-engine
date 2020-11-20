@@ -1,9 +1,9 @@
 [submodule "sky_engine/vendor/spdlog"]
 	path = sky_engine/vendor/spdlog
-	url = https://github.com/gabime/spdlog
+	url = https://github.com/Tavh/spdlog
 [submodule "sky_engine/vendor/GLFW"]
 	path = sky_engine/vendor/GLFW
-	url = https://github.com/TheCherno/glfw
+	url = https://github.com/Tavh/glfw
 [submodule "sky_engine/vendor/imgui"]
 	path = sky_engine/vendor/imgui
-	url = https://github.com/TheCherno/imgui
+	url = https://github.com/Tavh/imgui
