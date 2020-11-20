@@ -152,7 +152,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\engine\imgui\ImGuiLayer.h" />
     <ClInclude Include="src\Engine.h" />
     <ClInclude Include="src\engine\Application.h" />
     <ClInclude Include="src\engine\Core.h" />
@@ -165,18 +164,19 @@
     <ClInclude Include="src\engine\events\Event.h" />
     <ClInclude Include="src\engine\events\KeyEvent.h" />
     <ClInclude Include="src\engine\events\MouseEvent.h" />
-    <ClInclude Include="src\platform\opengl\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\engine\imgui\ImGuiLayer.h" />
     <ClInclude Include="src\platform\WindowsWindow.h" />
+    <ClInclude Include="src\platform\opengl\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\skypch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\engine\imgui\ImGuiLayer.cpp" />
     <ClCompile Include="src\engine\Application.cpp" />
     <ClCompile Include="src\engine\Layer.cpp" />
     <ClCompile Include="src\engine\LayerStack.cpp" />
     <ClCompile Include="src\engine\Log.cpp" />
-    <ClCompile Include="src\platform\opengl\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\engine\imgui\ImGuiLayer.cpp" />
     <ClCompile Include="src\platform\WindowsWindow.cpp" />
+    <ClCompile Include="src\platform\opengl\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\skypch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

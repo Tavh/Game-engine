@@ -13,3 +13,5 @@ sky_engine/sky_engine.vcxproj.user
 **.vcxproj
 **.vcxproj.filters
 **.vcxproj.user
+*.vcxproj
+*.filters

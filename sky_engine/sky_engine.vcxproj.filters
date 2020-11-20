@@ -7,8 +7,14 @@
     <Filter Include="engine\events">
       <UniqueIdentifier>{9FF33A70-0BB4-B6A6-D4EE-FF23406EFB82}</UniqueIdentifier>
     </Filter>
+    <Filter Include="engine\imgui">
+      <UniqueIdentifier>{A5B916B6-911C-A65A-3AA2-DE1026E471DD}</UniqueIdentifier>
+    </Filter>
     <Filter Include="platform">
       <UniqueIdentifier>{4A63C33C-3630-1E48-5F49-0CF04B7553D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform\opengl">
+      <UniqueIdentifier>{9E4DBFD0-0AD9-2C95-13EA-AF897FF48895}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -46,12 +52,16 @@
     <ClInclude Include="src\engine\events\MouseEvent.h">
       <Filter>engine\events</Filter>
     </ClInclude>
+    <ClInclude Include="src\engine\imgui\ImGuiLayer.h">
+      <Filter>engine\imgui</Filter>
+    </ClInclude>
     <ClInclude Include="src\platform\WindowsWindow.h">
       <Filter>platform</Filter>
     </ClInclude>
+    <ClInclude Include="src\platform\opengl\ImGuiOpenGLRenderer.h">
+      <Filter>platform\opengl</Filter>
+    </ClInclude>
     <ClInclude Include="src\skypch.h" />
-    <ClInclude Include="src\engine\imgui\ImGuiLayer.h" />
-    <ClInclude Include="src\platform\opengl\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\Application.cpp">
@@ -66,11 +76,15 @@
     <ClCompile Include="src\engine\Log.cpp">
       <Filter>engine</Filter>
     </ClCompile>
+    <ClCompile Include="src\engine\imgui\ImGuiLayer.cpp">
+      <Filter>engine\imgui</Filter>
+    </ClCompile>
     <ClCompile Include="src\platform\WindowsWindow.cpp">
       <Filter>platform</Filter>
     </ClCompile>
+    <ClCompile Include="src\platform\opengl\ImGuiOpenGLRenderer.cpp">
+      <Filter>platform\opengl</Filter>
+    </ClCompile>
     <ClCompile Include="src\skypch.cpp" />
-    <ClCompile Include="src\engine\imgui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\platform\opengl\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>
